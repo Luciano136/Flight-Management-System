@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Flight Management System</title>
+        <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- Main navigation (switches between app sections) -->
+    <nav>
+
+        <button onclick="showSection('flight')">
+            Enter Flight
+        </button>
+
+        <button onclick="showSection('user')">
+            Enter User
+        </button>
+
+        <button onclick="showSection('inProgress')">
+            Flight In Progress
+        </button>
+
+        <button onclick="showSection('history')">
+            Flight History
+        </button>
+
+        <button onclick="showSection('passengers')">
+            Passengers
+        </button>
+
+    </nav>
+
+    <section id="flight" class="section active"> <!-- Flight creation section -->
+
+        <h2>Enter Flight</h2>
+
+        <div class="container">
+
+            <input
+                type="text"
+                id="originInput"
+                placeholder="Origin">
+
+            <input
+                type="text"
+                id="destinationInput"
+                placeholder="Destination">
+
+            <input
+                type="number"
+                id="milesInput"
+                placeholder="Miles">
+
+            <input
+                type="number"
+                id="capacityInput"
+                placeholder="Capacity">
+
+            <button onclick="handleCreateFlight()">
+                Create Flight
+            </button>
+
+            <hr>
+
+            <h3>Flights</h3>
+            <div id="flightList"></div>
+
+        </div>
+    </section>
+
+    <section id="user" class="section"> <!-- User / Passenger assignment section -->
+
+    <h2>Users</h2>
+
+        <div class="container">
+
+            <h3>Add Passenger</h3>
+
+            <input
+                type="text"
+                id="userNameInput"
+                placeholder="Passenger Name">
+
+            <select id="flightSelect">
+
+            <option value="">
+                Select Flight
+            </option>
+
+            </select>
+
+            <button onclick="addPassenger()">
+                Add Passenger
+            </button>
+
+            <hr>
+
+                <h3>Flights</h3>
+
+            <div id="usersFlightList"></div>
+
+        </div>
+
+    </section>
+
+    <section id="inProgress" class="section"> <!-- Active flights section -->
+
+    <h2>Flights In Progress</h2>
+
+    <div class="container">
+
+        <h3>Active Flights</h3>
+
+        <div id="activeFlights"></div>
+
+    </div>
+
+    </section>
+
+    <section id="history" class="section"> <!-- Flight history section -->
+
+    <h2>Flight History</h2>
+
+    <div class="container">
+        <div id="historyList"></div>
+    </div>
+    </section>
+
+    <section id="passengers" class="section"> <!-- Passenger overview section -->
+        
+        <h2>Clients</h2>
+
+        <div class="container">
+            <div id="passengerList"></div>
+
+        </div>
+    </section>
+
+
+    <script src="script/data.js"></script>
+    <script src="script/ui.js"></script>
+    <script src="script/flights.js"></script>
+    <script src="script/users.js"></script>
+    <script src="script/app.js"></script>
+
+</body>
+</html>
