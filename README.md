@@ -5,6 +5,11 @@ A web-based airline management simulation built with vanilla JavaScript, HTML, a
 It allows users to create flights, manage passengers, track flight status, and distribute mileage rewards upon completion.
 
 ---
+
+## 🚀 Live Demo
+https://luciano136.github.io/Flight-Management-System/
+
+---
 ## ⚙️ Features
 - Create and manage flights
 - Assign and remove passengers
